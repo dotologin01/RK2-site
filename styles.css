@@ -1,0 +1,257 @@
+/* Общие стили */
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Шапка */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Центрирование навигационной панели */
+    align-items: center;
+    padding: 10px 0;
+}
+
+.navbar a {
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #e0e0e0;
+}
+
+#auth-links a {
+    margin-left: 15px;
+}
+
+/* Главная страница */
+main {
+   flex: 1; /* Главный блок занимает доступное пространство */
+}
+.hero {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.slider-container {
+    overflow: hidden;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+.featured-products {
+    padding: 30px 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.view-product-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.view-product-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Страница магазина */
+.product-list {
+    padding: 30px 0;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-table th, .product-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.product-table th {
+    background-color: #f2f2f2;
+}
+
+.product-table img {
+    max-width: 100px;
+}
+
+
+/* Страница продукта */
+.product-details {
+    display: flex;
+    align-items: flex-start;
+    padding: 30px 0;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.product-image {
+    flex: 1;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.product-info {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.product-info ul {
+    padding-left: 20px;
+}
+
+#add-to-cart-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#add-to-cart-btn:hover {
+    background-color: #218838;
+}
+
+/* Футер */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* Модальные окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal input{
+    display: block;
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ddd;
+}
+.modal button{
+    display: block;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+.modal textarea{
+    display: block;
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ddd;
+}
+.about-us{
+    padding: 30px 0;
+    text-align: center;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продукт | Магазин обуви</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+       <nav class="navbar">
+            <a href="index.html">Главная</a>
+            <a href="shop.html">Магазин</a>
+             <a href="about.html">О нас</a>
+             <div id="auth-links">
+                <a href="#" id="login-btn">Войти</a>
+                <a href="#" id="logout-btn" style="display: none;">Выйти</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+         <section class="product-details">
+              <div class="product-image">
+                   <img src="" alt="Изображение продукта" id="product-image-details">
+             </div>
+             <div class="product-info">
+                  <h2 id="product-title-details"></h2>
+                   <p>Цена: <span id="product-price-details"></span></p>
+                   <p>Наличие: <span id="product-availability-details"></span></p>
+                    <h3>Характеристики</h3>
+                    <ul id="product-specs-details"></ul>
+                    <p id="product-description-details"></p>
+                    <button id="add-to-cart-btn">Добавить в список покупок</button>
+              </div>
+         </section>
+    </main>
+
+    <footer>
+        <div class="container">
+           <p>© 2023 Магазин обуви. Все права защищены.</p>
+           <p>Контакт: info@example.com</p>
+        </div>
+    </footer>
+     <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Авторизация</h2>
+            <input type="text" id="login-username" placeholder="Имя пользователя">
+            <input type="password" id="login-password" placeholder="Пароль">
+            <button id="login-submit-btn">Войти</button>
+             <button id="register-btn">Регистрация</button>
+        </div>
+    </div>
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Регистрация</h2>
+            <input type="text" id="register-username" placeholder="Имя пользователя">
+            <input type="password" id="register-password" placeholder="Пароль">
+            <button id="register-submit-btn">Зарегистрироваться</button>
+        </div>
+    </div>
+    <div id="shopping-list-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Список покупок</h2>
+            <ul id="shopping-list-items"></ul>
+        </div>
+    </div>
+     <div id="feedback-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Обратная связь</h2>
+            <textarea id="feedback-message" placeholder="Ваше сообщение"></textarea>
+            <button id="feedback-submit-btn">Отправить</button>
+        </div>
+    </div>
+     <script src="script.js"></script>
+     <script src="utils/localstorage.js"></script>
+</body>
+</html>

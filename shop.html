@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная | Магазин обуви</title>
+    <title>Магазин | Магазин обуви</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
         <nav class="navbar">
             <a href="index.html">Главная</a>
             <a href="shop.html">Магазин</a>
-            <a href="about.html">О нас</a>
+             <a href="about.html">О нас</a>
             <div id="auth-links">
                 <a href="#" id="login-btn">Войти</a>
                 <a href="#" id="logout-btn" style="display: none;">Выйти</a>
@@ -20,43 +20,30 @@
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Добро пожаловать в наш магазин обуви!</h1>
-            <p>Мы предлагаем широкий ассортимент качественной обуви.</p>
-            <div class="slider-container">
-                <div class="slider">
-                    <div class="slide"><img src="assets/shoes1.jpg" alt="Обувь 1"></div>
-                    <div class="slide"><img src="assets/shoes2.jpg" alt="Обувь 2"></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="featured-products">
-            <h2>Обзор продукции</h2>
-            <div class="product-grid">
-                <div class="product-card" data-product-id="1">
-                    <img src="assets/shoes1.jpg" alt="Обувь 1">
-                    <h3>Кроссовки</h3>
-                    <p>Цена: 12000 руб.</p>
-                    <button class="view-product-btn">Подробнее</button>
-                </div>
-                <div class="product-card" data-product-id="2">
-                    <img src="assets/shoes2.jpg" alt="Обувь 2">
-                    <h3>Ботинки</h3>
-                    <p>Цена: 15000 руб.</p>
-                    <button class="view-product-btn">Подробнее</button>
-                </div>
-             </div>
+        <section class="product-list">
+            <h2>Наш ассортимент</h2>
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>Изображение</th>
+                        <th>Название</th>
+                        <th>Цена</th>
+                        <th>Описание</th>
+                        <th>Действие</th>
+                    </tr>
+                </thead>
+                <tbody id="product-table-body">
+                </tbody>
+            </table>
         </section>
     </main>
 
     <footer>
         <div class="container">
             <p>© 2023 Магазин обуви. Все права защищены.</p>
-            <p>Контакт: info@example.com</p>
+             <p>Контакт: info@example.com</p>
         </div>
     </footer>
-
     <div id="login-modal" class="modal">
         <div class="modal-content">
             <span class="close">×</span>
@@ -76,25 +63,22 @@
             <button id="register-submit-btn">Зарегистрироваться</button>
         </div>
     </div>
-    <div id="shopping-list-modal" class="modal">
+      <div id="shopping-list-modal" class="modal">
         <div class="modal-content">
             <span class="close">×</span>
             <h2>Список покупок</h2>
             <ul id="shopping-list-items"></ul>
         </div>
     </div>
-
     <div id="feedback-modal" class="modal">
         <div class="modal-content">
             <span class="close">×</span>
             <h2>Обратная связь</h2>
             <textarea id="feedback-message" placeholder="Ваше сообщение"></textarea>
-             <button id="feedback-submit-btn">Отправить</button>
+            <button id="feedback-submit-btn">Отправить</button>
         </div>
     </div>
-
     <script src="script.js"></script>
     <script src="utils/localstorage.js"></script>
-
 </body>
 </html>
