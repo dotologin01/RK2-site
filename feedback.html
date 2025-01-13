@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>обувь</title>
+    <title>Обратная связь</title>
     <link rel="stylesheet" href="styles/main.css">
-    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 <header>
@@ -34,19 +34,27 @@
 </header>
 
 <main>
-    <section class="product">
-        <div class="container">
-            <div class="product-info">
-                <img id="product-image" src="" alt="">
-                <div class="product-details">
-                    <h2 id="product-title"></h2>
-                    <p><b>Жанр:</b> <span id="product-genre"></span></p>
-                    <p><b>Цена:</b> <span id="product-price"></span> руб.</p>
-                    <p><b>В наличии:</b> <span id="product-stock"></span> шт.</p>
-                    <p><b>Описание:</b> <span id="product-fullDescription"></span></p>
-                    <button id="add-to-cart">Добавить в список покупок</button>
+    <section class="feedback">
+        <div class="container feedback-container">
+            <h2>Обратная связь</h2>
+            <form id="feedback-form">
+                <div class="form-group">
+                    <label for="feedback-name">Ваше имя:</label>
+                    <input type="text" id="feedback-name" name="name" required>
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="feedback-phone">Телефон:</label>
+                    <input type="tel" id="feedback-phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedback-message">Сообщение:</label>
+                    <textarea id="feedback-message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" id="feedback-submit">Отправить</button>
+                    <button type="reset" id="feedback-reset">Сбросить</button>
+                </div>
+            </form>
         </div>
     </section>
 </main>
@@ -59,11 +67,12 @@
       <p>г. Москва, ул. Пушкина, д. 10</p>
     </div>
   </footer>
-<script type="module" src="scripts/data.js"></script>
-<script src="scripts/utils.js"></script>
+
+<script src="scripts/data.js"></script>
 <script src="scripts/auth.js"></script>
 <script src="scripts/cart.js"></script>
 <script type="module" src="scripts/main.js"></script>
-<script type="module" src="scripts/product.js"></script>
+<script src="scripts/utils.js"></script>
+<script src="scripts/feedback.js"></script>
 </body>
 </html>

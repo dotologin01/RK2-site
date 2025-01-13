@@ -1,93 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная | Магазин обуви</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="./js/auth.js"></script>
-    <script src="./js/modal.js"></script>
-    <script src="./js/cart.js"></script>
-    <script src="./js/products.js"></script>
-    <script src="./js/slider.js"></script>
-     <script src="./js/show.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>обувь</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <a href="index.html">Главная</a>
-            <a href="shop.html">Магазин</a>
-            <a href="about.html">О нас</a>
-            <div id="auth-links">
-                <a href="#" id="login-btn">Войти</a>
-                <a href="#" id="logout-btn" style="display: none;">Выйти</a>
-                <a href="#" id="feedback-btn">Обратная связь</a>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <h1>Добро пожаловать в наш магазин обуви!</h1>
-            <p>Мы предлагаем широкий ассортимент качественной обуви.</p>
-            <div class="slider-container">
-                <div class="slider" id="product-slider">
-                    <!-- Слайды товаров будут генерироваться здесь -->
-                </div>
-            </div>
-        </section>
-
-        <section class="featured-products">
-            <h2>Обзор продукции</h2>
-            <div class="product-grid" id="product-grid">
-                <!-- Сюда будут добавляться карточки товаров -->
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>© 2023 Магазин обуви. Все права защищены.</p>
-            <p>Контакт: info@example.com</p>
-        </div>
-    </footer>
-    <!-- Модальные окна -->
-    <div id="login-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">×</span>
-            <h2>Авторизация</h2>
-            <input type="text" id="login-username" placeholder="Имя пользователя">
-            <input type="password" id="login-password" placeholder="Пароль">
-            <button id="login-submit-btn">Войти</button>
-             <button id="register-btn">Регистрация</button>
-        </div>
+<header>
+  <div class="logo-container">  
+    <img src="./assets/logo.png" alt="Логотип" class="logo">
+  </div>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="shop.html">Магазин</a></li>
+        <li><a href="about.html">Почему мы</a></li>
+        <li><a href="cart.html" id="cart-link" style="display: none;">Список покупок</a></li>
+      </ul>
+    </nav>
+    <div class="auth">
+      <form id="auth-form">
+        <input type="text" id="username" placeholder="Имя пользователя" required>
+        <input type="password" id="password" placeholder="Пароль" required>
+        <button type="submit">Войти</button>
+        <button id="register-button">Регистрация</button>
+      </form>
+      <button id="logout-button" style="display: none;">Выйти</button>
     </div>
-     <div id="register-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">×</span>
-            <h2>Регистрация</h2>
-            <input type="text" id="register-username" placeholder="Имя пользователя">
-            <input type="password" id="register-password" placeholder="Пароль">
-             <button id="register-submit-btn">Зарегистрироваться</button>
-        </div>
-     </div>
-    <div id="shopping-list-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">×</span>
-            <h2>Список покупок</h2>
-            <ul id="shopping-list-items"></ul>
-           <button id="go-to-cart-btn" style="position: absolute; bottom: 10px; right: 10px;">Перейти в корзину</button>
-        </div>
-    </div>
+  </div>
+</header>
 
-    <div id="feedback-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">×</span>
-            <h2>Обратная связь</h2>
-            <textarea id="feedback-message" placeholder="Ваше сообщение"></textarea>
-            <button id="feedback-submit-btn">Отправить</button>
-        </div>
-    </div>
+<main>
 
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="./assets/shoes13.jpg" alt="Slide 1">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="./assets/shoes12.jpg" alt="Slide 2">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="./assets/shoes11.jpg" alt="Slide 3">
+        </div>
+        <div class="mySlides fade">
+          <img src="/assets/shoes10.jpg" alt="Slide 4">
+        </div>
+        <div class="mySlides fade">
+          <img src="./assets/shoes1.jpg" alt="Slide 5">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+      <h1>Добро пожаловать в наш обувной магазин!</h1>
+      <p>Здесь вы найдете широкий выбор обуви на любую ногу.</p>
+    </div>
+  </section>
+
+  <section class="featured-productss">
+    <div class="container grid-container">
+      <h2>Популярная обувь</h2>
+      <div class="products-grid" id="featured-productss-grid">
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2007 обувной магазин "мамонтенок"</p>
+    <p>Контактная информация: <a href="tel:+79996664217" class="hyper-link">+7 (999) 666-42-17</a>, <a
+            href="mailto:contact@dotologin.ru" class="hyper-link">contact@dotologin.ru</a></p>
+    <p>г. Москва, ул. Пушкина, д. 10</p>
+  </div>
+</footer>
+<script src="scripts/utils.js"></script>
+<script type="module" src="scripts/data.js"></script>
+<script src="scripts/auth.js"></script>
+<script type="module" src="scripts/main.js"></script>
 </body>
 </html>
